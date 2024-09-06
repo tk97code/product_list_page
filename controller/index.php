@@ -23,6 +23,7 @@
     } else if ($action == 'delete_product') { 
         $product_id = filter_input(INPUT_POST,'product_id', FILTER_VALIDATE_INT);
         $category_id = filter_input(INPUT_POST,'category_id', FILTER_VALIDATE_INT);
+        echo $product_id;
         if ($category_id == null || $category_id == false ||
             $product_id == null || $product_id == false) {
             $error = "missing or incorrect product id or category id";
